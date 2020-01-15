@@ -1,0 +1,67 @@
+
+h1{
+  border-top: 5px solid pink;
+  border-bottom: 5px solid pink;
+  text-decoration: underline;
+  color: green;
+}
+
+h2{
+  background-color: yellow;
+  text-decoration: underline;
+  border-bottom: 5px solid orange;
+
+}
+
+#menu {
+    float:left;
+    clear:both;
+}
+
+#body{
+    float:right;
+
+}
+
+#rectify
+
+{
+	margin-top:0px;
+}
+
+#Ans1 {
+  background-color: turquoise;
+}
+
+#Ans2 {
+  border: 1px solid purple;
+  box-sizing: border-box;
+  height: 250px;
+  margin: 5px 3px 2px 7px;
+  padding: 4px 3px 2px;
+  width: 400px;
+}
+
+#Ans3 {
+  border: 1px solid purple;
+  box-sizing: content-box;
+  height: 250px;
+  margin: 5px 3px 2px 7px;
+  padding: 4px 3px 2px;
+  width: 400px;
+}
+
+h3{
+
+  margin-top:5px;
+  margin-bottom:5px;
+  margin-left:10px;
+  margin-right:10px;
+
+}
+
+nav {
+  display: block;
+  border: 1px solid purple;
+  background-color: turquoise;
+}
