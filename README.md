@@ -1,37 +1,33 @@
-## Welcome to GitHub Pages
+<!DOCTYPE html>
+<html>
 
-You can use the [editor on GitHub](https://github.com/nerajok/Blockchain-Development/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+<head>
+    <meta charset="utf-8">
+    <title>Favorite fruit start</title>
+    <style>
+      input:invalid {
+        border: 2px dashed purple;
+        background-image: linear-gradient(pink,green);
+      }
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+      input:valid {
+        border: 2px solid black;
+      }
+    </style>
+</head>
 
-### Markdown
+<body>
+    <form>
+      <label for="choose">Would you prefer a banana or a cherry?</label>
+      <input id="choose" name="i_like" required pattern="[B|b]anana|[C|c]herry">
+      <br>
+      <label for="choose">Write a text with length 3 to 20</label>
+      <input id="criteria" type="text" name="minax" minlength="3" maxlength="20">
+      <br>
+      <label for="choose">Select a number between 7 to 36</label>
+      <input id="numbers" type="number" name="minax2" min="7" max="36">
+      <button>Submit</button>
+    </form>
+</body>
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/nerajok/Blockchain-Development/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+</html>
