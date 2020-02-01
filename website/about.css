@@ -1,0 +1,137 @@
+body {
+    height: calc(100% - 50px);
+    background-image: url("bg4.png");
+    background-size: cover;
+    background-position: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2%;
+}
+
+#menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+aside.languages {
+    font: 0.8em "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    color: white;
+    background: #000;
+    opacity: 0.7;
+    padding: 5%;
+    padding-top: 5%;
+    float: none;
+    width: 90%;
+    margin-left: 1em;
+}
+
+.languages h3 {
+    font-weight: normal;
+    color: white;
+    font-size: 1.6em;
+    margin-bottom: 0.5em;
+}
+
+a:link {
+    color: #dbf2ff;
+}
+
+/* visited link */
+a:visited {
+    color: #dbf2ff;
+}
+
+/* mouse over link */
+a:hover {
+    color: #dbf2ff;
+}
+
+/* selected link */
+a:active {
+    color: white;
+}
+
+li nav {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    float: left;
+}
+
+li nav:hover {
+    background-color: #111;
+}
+
+li nav:active {
+    background-color: #4caf50;
+}
+
+.last {
+    color: white;
+    background-image: url("last.jpg");
+    opacity: 0.5;
+    text-align: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 30%;
+}
+
+#tabContainer h4 {
+    color: rgb(83, 104, 138);
+    font-size: 2em;
+}
+
+#tabs {
+    height: 30px;
+    overflow: hidden;
+}
+
+#tabs > ul {
+    font: 1em;
+    list-style: none;
+}
+#tabs ul,
+#tabs li {
+    margin: 0;
+    padding: 0;
+}
+
+#tabs > ul > li {
+    margin: 0 2px 0 0;
+    padding: 7px 10px;
+    display: block;
+    float: left;
+    color: #fff;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    background: #ccc;
+}
+
+#tabs > ul > li:hover {
+    background: white;
+    cursor: pointer;
+}
+
+#tabs > ul > .active {
+    background: white; /* old browsers */
+    cursor: pointer;
+}
+
+#containers div {
+    background: #c3dbff;
+    padding: 50px 50px 100px;
+    margin: 0;
+    color: #333;
+}
+#tabs a {
+    text-decoration: none;
+    color: black;
+}
