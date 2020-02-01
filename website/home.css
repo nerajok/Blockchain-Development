@@ -19,14 +19,14 @@
     text-align: center;
 }
 
-#steps {
+.steps {
     color: white;
     font-size: 1.875em;
     text-align: left;
     margin-left: 70px;
 }
 
-#wrapper {
+.wrapper {
     padding: 7px 10px;
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
