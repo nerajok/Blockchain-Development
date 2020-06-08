@@ -1,4 +1,4 @@
-const FifaToken = artifacts.require('./photoToken.sol');
+const photoToken = artifacts.require('./photoToken.sol');
 require('chai')
 	.use(require('chai-as-promised'))
 	.should()
@@ -42,24 +42,23 @@ describe('ERC 165 compliance', async() => {
 })
 
 describe('mint test', async() => {
-	it('mint token', async () => {
+	it('checks minting', async () => {
 		const first_photo = {
 			photo_id: "scenary",
 			size: 10,
 			originality: True
 		};
 		const checkBalance = await contract.balanceOf.call(accounts[0]);
-		assert.equal(checkBalance,0,'Account balance is zero');
+		assert.equal(checkBalance,0,'zero balance');
 		const result = await contract.mint(first_photo);
 		const totalSupply = await contract.totalSupply();
-		//SUCCESS
+
 		assert.equal(totalSupply,1);
 		const event = result.logs[0].args;
 		assert.equal(event.tokenId.toNumber(),0,'id is correct');
 		assert.equal(event.from,'0x0000000000000000000000000000000000000000','from is correct');
 		assert.equal(event.to,accounts[0],'to is correct');
 
-		//FAILURE
 		await contract.mint({
 			photo_id: "scenary",
 			size: 10,
