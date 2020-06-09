@@ -35,7 +35,7 @@ describe('deployment',async() => {
 
 describe('ERC 165 compliance', async() => {
 	it('Checks if Contract is ERC 165 compliant', async() => {
-		const ERC165test = await contract.supportsInterface.call('0x01ffc9a7'); //0x01ffc9a7 is ERC165 interface ID.
+		const ERC165test = await contract.supportsInterface.call('0x01ffc9a7');
 		assert.equal(ERC165test,true,'Contract is ERC165 compliant');
 	})
 

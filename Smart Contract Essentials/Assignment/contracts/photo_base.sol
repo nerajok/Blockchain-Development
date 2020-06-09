@@ -18,6 +18,8 @@ contract photoToken is ERC721 {
 
 	Photo[] public photos;
 
+    mapping(address => uint) etherBalance;
+
 	mapping(uint => bool) _photoExists;
 
 	constructor () ERC721("Photo","PIC") public {
@@ -30,6 +32,14 @@ contract photoToken is ERC721 {
 		_photoExists[_photo.photo_id] = true;
 		_mint(msg.sender, _photo.photo_id);
 	}
+
+    function ownerof(uint256 tokenId) public view returns (address) {
+        return ownerOf(tokenId);
+    }
+
+    function balanceof(address owner) public view returns (uint256) {
+        return balanceOf(owner);
+    }
 
 //A function that can set value for the unique item in a standardized way. So far limited to a single token.
 	function look_up(Photo memory _photo) public pure returns(uint) {
@@ -46,7 +56,11 @@ contract photoToken is ERC721 {
     function exchange(Photo memory _photo,uint _amount) public payable returns(bool){
         uint requiredValue = look_up(_photo);
         require(_amount==requiredValue,"Incorrect value sent");
-        _transfer(ownerOf(_photo.photo_id),msg.sender,_photo.photo_id);
+        address photoOwner = ownerOf(_photo.photo_id);
+        etherBalance[photoOwner] += _amount;
+        etherBalance[photoOwner] -= _amount;
+        _transfer(photoOwner,msg.sender,_photo.photo_id);
+        return true;
     }
 
 }
