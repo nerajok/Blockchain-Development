@@ -10,26 +10,28 @@ contract photoToken is ERC721 {
 
 	struct Photo
 	{
-        string photo_id;
+        uint photo_id;
+        string name;
         uint size;
         bool originality;
 	}
 
 	Photo[] public photos;
 
-	mapping(string => bool) _photoExists;
+	mapping(uint => bool) _photoExists;
 
 	constructor () ERC721("Photo","PIC") public {
 	}
 
+//Mints a token for the caller.
 	function mint(Photo memory _photo) public {
 		require(_photoExists[_photo.photo_id] == false, "photo_id already exists");
 		photos.push(_photo);
-		uint _id = photos.length - 1;
 		_photoExists[_photo.photo_id] = true;
-		_mint(msg.sender, _id);
+		_mint(msg.sender, _photo.photo_id);
 	}
 
+//A function that can set value for the unique item in a standardized way. So far limited to a single token.
 	function look_up(Photo memory _photo) public pure returns(uint) {
         uint value = 0;
         if (_photo.size >= 0 && _photo.size <= 10) {value = 50;}
@@ -40,10 +42,11 @@ contract photoToken is ERC721 {
         return value;
     }
 
+//This function should be called by the buyer.
     function exchange(Photo memory _photo,uint _amount) public payable returns(bool){
         uint requiredValue = look_up(_photo);
         require(_amount==requiredValue,"Incorrect value sent");
-        
+        _transfer(ownerOf(_photo.photo_id),msg.sender,_photo.photo_id);
     }
 
 }

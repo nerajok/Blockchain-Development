@@ -44,7 +44,8 @@ describe('ERC 165 compliance', async() => {
 describe('mint test', async() => {
 	it('checks minting', async () => {
 		const first_photo = {
-			photo_id: "scenary",
+			photo_id: 11111,
+			name: scenary,
 			size: 10,
 			originality: True
 		};
@@ -60,8 +61,8 @@ describe('mint test', async() => {
 		assert.equal(event.to,accounts[0],'to is correct');
 
 		await contract.mint({
-			photo_id: "scenary",
-			size: 10,
+			photo_id: 11111,
+			name: scenary,
 			originality: True
 		}).should.be.rejected;
 	})
@@ -111,7 +112,8 @@ describe('transfer test', async() => {
 	it('Checks transferFrom', async() => {
 
 		await contract.mint({
-			photo_id: "familyPic",
+			photo_id: 22222,
+			name: "familyPic",
 			size: 15,
 			originality: True
 		});
@@ -136,7 +138,8 @@ describe('transfer test', async() => {
 	it('Checks safeTransferFrom', async() =>{
 
 		await contract.mint({
-			photo_id: "Vacation",
+			photo_id: 33333,
+			name: "Vacation",
 			size: 50,
 			originality: False
 		});
