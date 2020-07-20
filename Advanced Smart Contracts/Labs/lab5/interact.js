@@ -4,7 +4,7 @@ const abi = require("./lab5_sol_SimpleStorage.json");
 
 const PRIVATE_KEY="0xdf3a62a57178f5e42e714331faa326d6a05333d539bdb8280d28428fb6d50a45"
 const URI="http://127.0.0.1:8545"
-const WEBSOCKET_URI="http://127.0.0.1:8546"
+const WEBSOCKET_URI="http://127.0.0.1:8545"
 const CONTRACT_ADDRESS= "0x3205947a64E4BA2Af772ac6962277208ceF07f34";
 
 
