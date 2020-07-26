@@ -85,7 +85,7 @@ contract("newProxyContract", accounts => {
     })
 
     it("setVersion by delegatecall should pass", async () => {
-        const expectedVersion = 3;
+        const expectedVersion = 1;
         // generate the function selector for setVersion
         const selector = utils.id("setVersion(uint256)").slice(0,10);
         // encode the argument
