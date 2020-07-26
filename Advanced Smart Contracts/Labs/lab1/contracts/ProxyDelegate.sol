@@ -10,7 +10,6 @@ contract ProxyDelegate {
     constructor(address delegateAddress) public {
         owner = msg.sender;
         delegate = delegateAddress;
-        // version = _version;
     }
 
     function() external {
