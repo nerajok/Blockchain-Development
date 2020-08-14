@@ -1,6 +1,6 @@
-#Consortium Boilerplate Dapp
+# Consortium Boilerplate Dapp
 
-#Description:
+# Description:
 This project was developed to be a boilerplate for any private blockchain project using Hyperledger Fabric. The Minimum Viable Product(MVP) has been completed but its not industry grade. Furthermore, this project was made to be an tutorial for anyone new trying to learn Hyperledger Fabric.
 
 To learn more about this project please refer to the documentation.pdf file in the project folder.
