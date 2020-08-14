@@ -18,7 +18,7 @@ Make sure to clone the Hyperfabric Fabric Samples as it is required to setup a t
 
 Copy the following commands to setup the network , inside the /fabric-samples folder
 	
-	git clone https://github.com/nerajok/Blockchain-Development/dapp2/project/
+	git clone https://github.com/nerajok/demo.git
 	curl -sSL http://bit.ly/2ysbOFE | bash -s
 	cp -R ./PlateRegistry-DApp/platechain/ ./
 	cp -R ./PlateRegistry-DApp/chaincode/ ./
